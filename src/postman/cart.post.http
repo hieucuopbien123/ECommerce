@@ -1,0 +1,63 @@
+@url_dev=http://localhost:3055/v1/api
+
+### add to user cart
+POST {{url_dev}}/cart
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDE3MDczNiwiZXhwIjoxNzI0MzQzNTM2fQ.sKiJTK6W8dZqaXrXAx_fzPEQundr8kYouiwxP6yZVDI
+
+{
+  "userId": 1001,
+  "product": {
+    "productId": "6532b0683fe14163e0e874c3",
+    "shopId": "652eaf54ccd7f0b5c03396a1",
+    "quantity": 10, 
+    "name": "", 
+    "price": 1234
+  }
+}
+
+### Delete item in cart
+DELETE {{url_dev}}/cart
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDE3MDczNiwiZXhwIjoxNzI0MzQzNTM2fQ.sKiJTK6W8dZqaXrXAx_fzPEQundr8kYouiwxP6yZVDI
+
+{
+  "userId": 1001,
+  "productId": "6532b0683fe14163e0e874c3"
+}
+
+### Get cart of user
+GET {{url_dev}}/cart?userId=1001
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDE3MDczNiwiZXhwIjoxNzI0MzQzNTM2fQ.sKiJTK6W8dZqaXrXAx_fzPEQundr8kYouiwxP6yZVDI
+
+### Update cart item of user
+POST {{url_dev}}/cart/update
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDE3MDczNiwiZXhwIjoxNzI0MzQzNTM2fQ.sKiJTK6W8dZqaXrXAx_fzPEQundr8kYouiwxP6yZVDI
+
+{
+  "userId": 1001,
+  "shop_order_ids":  [
+    {
+      "shopId": "652eaf54ccd7f0b5c03396a1",
+      "item_products": [
+        {
+          "quantity": 17,
+          "price": 1234,
+          "shopId": "652eaf54ccd7f0b5c03396a1",
+          "old_quantity": 10,
+          "productId": "6532b0683fe14163e0e874c3"
+        }
+      ],
+      "version": 2000
+    }
+  ]
+}
+
+
+

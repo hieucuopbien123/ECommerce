@@ -1,0 +1,31 @@
+@url_dev=http://localhost:3055/v1/api
+
+### checkout review
+POST {{url_dev}}/checkout/review
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+{
+  "cartId": "66c4c2d02796491677d77eea",
+  "userId": 1001,
+  "shop_order_ids": [
+    {
+      "shopId": "652eaf54ccd7f0b5c03396a1",
+      "shop_discounts": [],
+      "item_products": [
+        { "price": 50, "quantity": 2, "productId": "6532b0683fe14163e0e874c3" }
+      ]
+    },
+    {
+      "shopId": "652eaf54ccd7f0b5c03396a1",
+      "shop_discounts": [
+        { "shopId": "652eaf54ccd7f0b5c03396a1", "discountId": "66cb169352c87d8846bcc39d", "codeId": "SHOP-1122" }
+      ],
+      "item_products": [
+        { "price": 50, "quantity": 2, "productId": "65327c364cd432fac2b929c3" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+@url_dev=http://localhost:3055/v1/api
+
+### createProduct
+POST {{url_dev}}/product
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+{
+  "product_name": "Xin chao tester5",
+  "product_description": "High-quality denim jeans",
+  "product_price": 50,
+  "product_shop": "652eaf54ccd7f0b5c03396a1",
+  "product_type": "Furniture",
+  "product_thumb": "product_thumb",
+  "product_quantity": 5,
+  "product_attribute": {
+    "manufacturer": "Levi's",
+    "model": "Ryan",
+    "color": "red"
+  }
+}
+
+
+### Get all draft
+GET {{url_dev}}/product/drafts/all
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+
+
+### Publish product
+POST {{url_dev}}/product/publish/6532b0683fe14163e0e874c3
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+
+### Unpublish product
+POST {{url_dev}}/product/unpublish/652eaf6fccd7f0b5c03396a9
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzU1ODM1NywiZXhwIjoxNjk3NzMxMTU3fQ.QY_fxoK6oCv6SPJBXx1Va7E_3o9qgidX5SZ2vpz2Tnc
+
+
+
+### Get all published product for shop
+GET {{url_dev}}/product/published/all
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+
+### Get list search product
+GET {{url_dev}}/product/search/Xin
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+
+
+### Get all product
+GET {{url_dev}}/product
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+
+
+
+### FindProduct
+GET {{url_dev}}/product/652ec5625fa33fa46afaf02a
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+
+
+
+### UpdateProduct
+PATCH {{url_dev}}/product/652ec5625fa33fa46afaf02a
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+{
+  "_id": 123,
+  "test": 1,
+  "product_price": 500,
+  "product_quantity": 5,
+  "product_type": "Furniture",
+  "product_shop": "652ea7f0b5c033a1",
+  "product_attribute": {
+    "manufacturer": "Lei's",
+    "color": "red"
+  }
+}
+
+

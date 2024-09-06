@@ -1,0 +1,42 @@
+@url_dev=http://localhost:3055/v1/api
+
+### signup
+POST {{url_dev}}/shop/signup
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+
+{
+  "name": "Shopdev1",
+  "email": "shopdev2@gmail.com",
+  "password": "abc123"
+}
+
+### login
+POST {{url_dev}}/shop/login
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+
+{
+  "email": "shopdev2@gmail.com",
+  "password": "abc123"
+}
+
+### logout
+POST {{url_dev}}/shop/logout
+Content-Type: application/json
+x-api-key: c4de069f7ad0becd5e7b9cd7c5b0ec88c171b612aea4b3afc8d67cce59f14022118a2bae273571c1ff7a8597592f85e9d190b72724df110ea0e9feb119db4056
+x-client-id: 652a131cd87bb526edd50833
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJhMTMxY2Q4N2JiNTI2ZWRkNTA4MzMiLCJlbWFpbCI6InNob3BkZXYxMUBnbWFpbC5jb20iLCJpYXQiOjE2OTcyNjMwNDMsImV4cCI6MTY5NzQzNTg0M30.eFfMsgL7WHbOODEyz-GunwSdk2nyHLIVeRbN73HH-oY
+
+{
+  "email": "shopdev11@gmail.com",
+  "password": "abc123"
+}
+
+### handlerefreshtoken
+POST {{url_dev}}/shop/handlerefreshtoken
+Content-Type: application/json
+x-api-key: c4de069f7ad0becd5e7b9cd7c5b0ec88c171b612aea4b3afc8d67cce59f14022118a2bae273571c1ff7a8597592f85e9d190b72724df110ea0e9feb119db4056
+x-client-id: 652a131cd87bb526edd50833
+refreshtoken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJhMTMxY2Q4N2JiNTI2ZWRkNTA4MzMiLCJlbWFpbCI6InNob3BkZXYxMUBnbWFpbC5jb20iLCJpYXQiOjE2OTcyNzE3NzgsImV4cCI6MTY5Nzg3NjU3OH0.idSVCu3cuuouZdG34plbWVWfXedQ6qzQ_L5SYI84ccM
+

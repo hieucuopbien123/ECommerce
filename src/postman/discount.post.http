@@ -1,0 +1,100 @@
+@url_dev=http://localhost:3055/v1/api
+
+
+### createDiscount specific
+POST {{url_dev}}/discount
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU4NDUyOCwiZXhwIjoxNzI0NzU3MzI4fQ.ORb0vA89FACQozc4Ot5dPGEljC5-IkEPrLk3uYB44Hs
+
+{
+  "name": "name fixed amount",
+  "description": "description",
+  "type": "percentage",
+  "value": 30000,
+  "code": "SHOP-1122",
+  "start_date": "2023-10-20 09:00:00",
+  "end_date": "2025-10-30 09:00:00",
+  "max_uses": 100,
+  "max_uses_per_user": 1,
+  "min_order_value": 10,
+  "isActive": true,
+  "applies_to": "specific",
+  "product_ids": ["652eaf6fccd7f0b5c03396a9", "65327c364cd432fac2b929c3"],
+  "shopId": "652eaf54ccd7f0b5c03396a1"
+}
+
+
+
+### createDiscount all
+POST {{url_dev}}/discount
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU4NDUyOCwiZXhwIjoxNzI0NzU3MzI4fQ.ORb0vA89FACQozc4Ot5dPGEljC5-IkEPrLk3uYB44Hs
+
+{
+  "name": "name percentage",
+  "description": "description",
+  "type": "percentage",
+  "value": 10,
+  "code": "SHOP-1133",
+  "start_date": "2023-10-20 09:00:00",
+  "end_date": "2025-10-30 09:00:00",
+  "max_uses": 100,
+  "max_uses_per_user": 1,
+  "min_order_value": 10,
+  "isActive": true,
+  "applies_to": "all",
+  "shopId": "652eaf54ccd7f0b5c03396a1"
+}
+
+
+
+### Lấy list voucher
+GET {{url_dev}}/discount?shopId=652eaf54ccd7f0b5c03396a1&limit=50&page=1
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+
+
+### Lấy chi tiết voucher
+GET {{url_dev}}/discount/list_product_code?code=SHOP-1122&shopId=652eaf54ccd7f0b5c03396a1&limit=50&page=1
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+
+
+### Lấy giá giảm
+POST {{url_dev}}/discount/amount
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTY5NzczMzc2NiwiZXhwIjoxNjk3OTA2NTY2fQ.L4kwfVhk2v6t_FGvbk_4hscj1nZWabfehPixmisuIrg
+
+{
+  "codeId": "SHOP-1122",
+  "userId": 2,
+  "shopId": "652eaf54ccd7f0b5c03396a1",
+  "products": [
+    {
+      "productId": "652eaf6fccd7f0b5c03396a9",
+      "quantity": 1,
+      "price": 120000
+    }
+  ]
+}
+
+
+### Xóa mã giảm giá 
+DELETE {{url_dev}}/discount/SHOP-1122
+Content-Type: application/json
+x-api-key: bf758edd8a1f6d64b32497c744e4210bbd8b5ec81f1d44972537e0ae55059fdeb4c538241f9a1a32140a0e60b8bb5e5227ce88d4a5b2b1e731c93da759e4d5ae
+x-client-id: 652eaf54ccd7f0b5c03396a1
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTJlYWY1NGNjZDdmMGI1YzAzMzk2YTEiLCJlbWFpbCI6InNob3BkZXYyQGdtYWlsLmNvbSIsImlhdCI6MTcyNDU4NDUyOCwiZXhwIjoxNzI0NzU3MzI4fQ.ORb0vA89FACQozc4Ot5dPGEljC5-IkEPrLk3uYB44Hs
+
